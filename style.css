@@ -14,8 +14,7 @@
     --secondary-bg: #596d48; 
     --primary-text: #161616;
     --secondary-text: #f5f5fe;
-    --focus-bg: #2727f8;
-    --invalid-bg: #ff2828;
+    --focus-bg: #2f9706;
 }
 
 body{
@@ -58,56 +57,70 @@ header{
 
 main{
     flex: 3;
-    padding: 10% 0;
+    padding: 5% 0 10%;
 }
 
 main > p,
 form > button,
 fieldset > *{
-    margin-left: 2rem;
-    margin-right: 3.5rem;
+    margin-left: 2.5rem;
+    margin-right: min(10%, 7rem);
 }
 
 main > p{
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.1;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
 main > p:last-child{
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 fieldset{
+    position: relative;
     background-color: #fff;
-    padding-top: 1rem;
+    padding-top: 4rem;
     padding-bottom: 1rem;
-    padding-right: 4rem;
+    padding-right: min(4rem, 10%);
     margin: 1.5rem 0;
     border: none;
 }
-h1{
+legend{
+    position: absolute;
+    top: 10%;
     font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+    font-weight: 600;
 }
 .form-controls{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    column-gap: 3rem;
 }
 .form-controls > div{
     width: 40%;
+    margin-bottom: 1rem;
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column-reverse;
 }
 input{
     height: 30px;
+    width: 100%;
     padding: 4px;
+    border: 2px solid var(--primary-text);
+    border-radius: 3px;
+    transition: 0.5s;
+    outline: none;
 }
 input:focus{
     border-color: var(--focus-bg);
-    box-shadow: 3px 3px;
+    box-shadow: 1px 1px 2px 1px var(--primary-text);
 }
+label{
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
