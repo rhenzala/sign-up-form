@@ -21,3 +21,20 @@ header{
 main{
     flex: 3;
 }
+
+.title-bg{
+    background-color: rgba(14, 14, 14, 0.6);
+    height: 15%;
+    width: 100%;
+    margin-top: 25%;
+    padding: 1.2rem 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.title{
+    color: #f6f6f6;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+}
