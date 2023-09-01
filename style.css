@@ -11,9 +11,11 @@
 }
 :root{
     --primary-bg: #fafafa;
-    --secondary-bg: #0c042c; 
+    --secondary-bg: #596d48; 
     --primary-text: #161616;
     --secondary-text: #f5f5fe;
+    --focus-bg: #2727f8;
+    --invalid-bg: #ff2828;
 }
 
 body{
@@ -21,13 +23,15 @@ body{
     flex-direction: row;
     background-color: var(--primary-bg);
     color: var(--primary-text);
-    font-family: sans-serif;
+    font-family: Helvetica, sans-serif;
     height: 100vh;
 }
 
 header{
     flex: 2;
-    background: url('./assets/bg.jpg') no-repeat center;
+    background-image: url('./assets/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .title-bg{
@@ -74,4 +78,36 @@ main > p{
 main > p:last-child{
     font-size: 16px;
     font-weight: 600;
+}
+
+fieldset{
+    background-color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 4rem;
+    margin: 1.5rem 0;
+    border: none;
+}
+h1{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.form-controls{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.form-controls > div{
+    width: 40%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+input{
+    height: 30px;
+    padding: 4px;
+}
+input:focus{
+    border-color: var(--focus-bg);
+    box-shadow: 3px 3px;
 }
