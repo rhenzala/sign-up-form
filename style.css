@@ -9,22 +9,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --primary-bg: #fafafa;
+    --secondary-bg: #0c042c; 
+    --primary-text: #161616;
+    --secondary-text: #f5f5fe;
+}
 
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     flex-direction: row;
-
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    font-family: sans-serif;
     height: 100vh;
 }
 
 header{
     flex: 2;
-
     background: url('./assets/bg.jpg') no-repeat center;
-}
-main{
-    flex: 3;
 }
 
 .title-bg{
@@ -33,14 +36,13 @@ main{
     width: 100%;
     margin-top: 25%;
     padding: 0.8rem 0;
-
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
 .title{
-    color: #f6f6f6;
+    color: var(--secondary-text);
     text-transform: uppercase;
     font-size: 4rem;
     font-family: Norse-Bold, sans-serif;
@@ -48,4 +50,28 @@ main{
 }
 .title-bg > img{
     max-height: 100%;
+}
+
+main{
+    flex: 3;
+    padding: 10% 0;
+}
+
+main > p,
+form > button,
+fieldset > *{
+    margin-left: 2rem;
+    margin-right: 3.5rem;
+}
+
+main > p{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+main > p:last-child{
+    font-size: 16px;
+    font-weight: 600;
 }
