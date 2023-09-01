@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+
+    height: 100vh;
+}
+
+header{
+    flex: 2;
+
+    background: url('./assets/bg.jpg') no-repeat center;
+}
+main{
+    flex: 3;
+}
