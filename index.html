@@ -22,30 +22,30 @@
         </p>
         <form action="#" method="post">
             <fieldset class="form-inputs">
-                <h1>Let's Do This!</h1>
+                <legend>Let's Do This!</legend>
                 <div class="form-controls">
                     <div>
-                        <input type="text" id="firstname">
+                        <input type="text" id="firstname" name="firstname" minlength="2" required>
                         <label for="firstname">First Name</label>
                     </div>
                     <div>
-                        <input type="text" id="lastname">
+                        <input type="text" id="lastname" name="lastname" minlength="2" required>
                         <label for="lastname">Last Name</label>
                     </div>
                     <div>
-                        <input type="email" id="email">
+                        <input type="email" id="email" name="email" required>
                         <label for="email">Email</label>
                     </div>
                     <div>
-                        <input type="tel" id="phone">
+                        <input type="tel" name="phone" min="10" max="11" id="phone">
                         <label for="phone">Phone Number</label>
                     </div>
                     <div>
-                        <input type="password" id="password">
+                        <input type="password" name="password" id="password" minlength="8" required>
                         <label for="password">Password</label>
                     </div>
                     <div>
-                        <input type="password" id="confpw">
+                        <input type="password" name="confpw" id="confpw" minlength="8" required>
                         <label for="confpw">Confirm Password</label>
                     </div>
                 </div>
