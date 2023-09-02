@@ -11,7 +11,8 @@
 }
 :root{
     --primary-bg: #fafafa;
-    --secondary-bg: #596d48; 
+    --secondary-bg: #fff;
+    --btn-color: #596d48; 
     --primary-text: #161616;
     --secondary-text: #f5f5fe;
     --focus-bg: #2f9706;
@@ -81,12 +82,13 @@ main > p:last-child{
 
 fieldset{
     position: relative;
-    background-color: #fff;
+    background-color: var(--secondary-bg);
     padding-top: 4rem;
     padding-bottom: 1rem;
     padding-right: min(4rem, 10%);
     margin: 1.5rem 0;
     border: none;
+    box-shadow: 0px 2px 5px #e5e7eb;
 }
 legend{
     position: absolute;
@@ -110,17 +112,50 @@ input{
     height: 30px;
     width: 100%;
     padding: 4px;
-    border: 2px solid var(--primary-text);
-    border-radius: 3px;
+    border: 1px solid var(--primary-text);
+    border-radius: 0;
     transition: 0.5s;
     outline: none;
 }
 input:focus{
     border-color: var(--focus-bg);
-    box-shadow: 1px 1px 2px 1px var(--primary-text);
+    box-shadow: 1px 1px 3px 0 var(--primary-text);
 }
 label{
     font-size: 12px;
     text-transform: uppercase;
 }
 
+button,
+input{
+    font-family: inherit;
+    font-size: 16px;
+}
+
+button{
+    background-color: var(--primary-bg);
+    font-weight: 600;
+    color: var(--btn-color);
+    border: 1px solid var(--btn-color);
+    border-radius: 0;
+    padding: 12px 32px;
+    outline: none;
+}
+button:hover,
+button:focus{
+    background-color: var(--btn-color);
+    color: var(--secondary-text);
+}
+button:hover{
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--btn-color);
+}
+a:visited{
+    color: #8d0b2c;
+}
