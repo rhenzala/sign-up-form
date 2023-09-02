@@ -25,34 +25,51 @@
                 <legend>Let's Do This!</legend>
                 <div class="form-controls">
                     <div>
-                        <input type="text" id="firstname" name="firstname" minlength="2" required>
                         <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" minlength="2" required>
                     </div>
                     <div>
-                        <input type="text" id="lastname" name="lastname" minlength="2" required>
                         <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" minlength="2" required>
                     </div>
                     <div>
-                        <input type="email" id="email" name="email" required>
                         <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div>
-                        <input type="tel" name="phone" minlength="4" maxlength="11" id="phone">
                         <label for="phone">Phone Number</label>
+                        <input type="tel" name="phone" minlength="4" maxlength="11" id="phone">
                     </div>
                     <div>
-                        <input type="password" name="password" id="password" minlength="8" required>
                         <label for="password">Password</label>
+                        <input type="password" name="password" id="password" minlength="8" onchange="check()" title="Password must be at least 8 characters" required>
                     </div>
                     <div>
-                        <input type="password" name="confpw" id="confpw" minlength="8" required>
-                        <label for="confpw">Confirm Password</label>
+                        <label for="confirmpw">Confirm Password</label>
+                        <input type="password" name="confirmpassword" id="confirmpw" minlength="8" onkeyup="check()" required>
+                        <div id="message" class="error"></div>
                     </div>
+                    
                 </div>
             </fieldset>
             <button type="submit">Create Account</button>
         </form>
         <p>Already have an account? <a href="#">Log in</a></p>
     </main>
+
+    <script>
+        function check() {
+            const pw = document.getElementById('password');
+            const confpw = document.getElementById('confirmpw');
+            const msg = document.getElementById('message');
+         
+            if (pw.value !== confpw.value){
+                msg.textContent = "Passwords do not match"
+            }
+            else{
+                msg.textContent = ""
+            }
+        }
+    </script>
 </body>
 </html>
